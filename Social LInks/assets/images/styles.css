@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000; /* Changed background color to black */
+  }
+  .container {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333333;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666666;
+  }
+  .profile-img {
+    width: 100px; /* Adjust image width */
+    height: 100px; /* Adjust image height */
+    border-radius: 50%; /* Make image circular */
+    margin-bottom: 20px;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column; /* Arrange links vertically */
+    gap: 10px; /* Add gap between links */
+  }
+  .social-link {
+    width: 100px; /* Adjusted width for rectangle */
+    height: 50px; /* Adjusted height for rectangle */
+    border-radius: 10px; /* Added border-radius for rectangle */
+    background-color: #333333;
+    color: #ffffff;
+    line-height: 50px; /* Adjusted line-height for centering */
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .social-link:hover,
+  .social-link:focus {
+    background-color: #007bff;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .attribution a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
