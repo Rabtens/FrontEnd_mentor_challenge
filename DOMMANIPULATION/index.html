@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+    <style>
+        .textWhite {
+            color: white;
+        }
+
+        .textPurple {
+            color: purple;
+        }
+    </style>
+
+    <h1 id="mainHeading" class="textWhite">DOM Manipulation</h1>   
+
+    <button id="redBtn">Red</button>
+    <button id="blueBtn">Blue</button>
+    <button id="whiteBtn">White</button>
+    <button id="purpleBtn">Purple</button>
+    <button id="SurpriseBtn">Surprise Me</button>
+    <button id="DontSurpriseBtn">Don't Surprise Me</button>
+
+    <div id="surpriseText"></div>
+    <div id="dontSurpriseText"></div>
+
+    <script>
+
+        console.log("Hello")
+        
+        const redButton = document.getElementById('redBtn');
+        const blueButton = document.getElementById('blueBtn');
+        const whiteButton = document.getElementById('whiteBtn');
+        const purpleButton = document.getElementById('purpleBtn');
+        const mainHeading = document.getElementById('mainHeading');
+        const surpriseButton = document.getElementById('SurpriseBtn');
+        const dontSurpriseButton = document.getElementById('DontSurpriseBtn');
+        const surpriseText = document.getElementById('surpriseText');
+        const dontSurpriseText = document.getElementById('dontSurpriseText');
+
+        redButton.addEventListener('click', function() {
+            console.log('Red clicked');
+            document.body.style.backgroundColor = 'red'; // Changes background color to red
+        });
+
+        blueButton.addEventListener('click', function() {
+            console.log('Blue clicked');
+            document.body.style.backgroundColor = 'blue'; // Changes background color to blue
+        });
+
+        purpleButton.addEventListener('click', function() {
+            console.log('Purple clicked');
+            document.body.style.backgroundColor = 'white'; // Changes background color to white
+            mainHeading.classList.remove('textWhite'); // Remove textWhite class
+            mainHeading.classList.add('textPurple'); // Add textPurple class
+        });
+
+        whiteButton.addEventListener('click', function() {
+            console.log('White clicked');
+            document.body.style.backgroundColor = 'purple'; // Changes background color to purple
+            mainHeading.classList.remove('textPurple'); // Remove textPurple class
+            mainHeading.classList.add('textWhite'); // Add textWhite class
+        }); 
+
+        surpriseButton.addEventListener('click', function() {
+            console.log('Surprise Me clicked');
+            surpriseText.textContent = "You are surprised!";
+            dontSurpriseText.textContent = "";
+        });
+
+        dontSurpriseButton.addEventListener('click', function() {
+            console.log("Don't Surprise Me clicked");
+            dontSurpriseText.textContent = "Don't surprise me!";
+            surpriseText.textContent = "";
+        });
+    </script>
+</body>
+</html>
