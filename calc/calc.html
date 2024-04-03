@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>   
+
+    <label for="value1">Val 1:</label>
+    <input type="number" id="value1" placeholder="Enter value 1">
+
+    <label for="value2">Val 2:</label>
+    <input type="number" id="value2" placeholder="Enter value 2">
+
+    <br>
+
+    <button id="addBtn">Add</button>
+    <button id="subtractBtn">Subtract</button>
+    <button id="multiplyBtn">Multiply</button>
+    <button id="divideBtn">Divide</button>
+
+    <br><br>
+
+    <div id="result"></div>
+
+    <script>
+        const value1Input = document.getElementById('value1');
+        const value2Input = document.getElementById('value2');
+        const addButton = document.getElementById('addBtn');
+        const subtractButton = document.getElementById('subtractBtn');
+        const multiplyButton = document.getElementById('multiplyBtn');
+        const divideButton = document.getElementById('divideBtn');
+        const resultDiv = document.getElementById('result');
+
+        addButton.addEventListener('click', function() {
+            const result = parseFloat(value1Input.value) + parseFloat(value2Input.value);
+            resultDiv.textContent = `Result: ${result}`;
+        });
+
+        subtractButton.addEventListener('click', function() {
+            const result = parseFloat(value1Input.value) - parseFloat(value2Input.value);
+            resultDiv.textContent = `Result: ${result}`;
+        });
+
+        multiplyButton.addEventListener('click', function() {
+            const result = parseFloat(value1Input.value) * parseFloat(value2Input.value);
+            resultDiv.textContent = `Result: ${result}`;
+        });
+
+        divideButton.addEventListener('click', function() {
+            const result = parseFloat(value1Input.value) / parseFloat(value2Input.value);
+            resultDiv.textContent = `Result: ${result}`;
+        });
+    </script>
+</body>
+</html>

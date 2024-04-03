@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Name</title>
+</head>
+<body>
+
+    <h1>Dynamic List</h1>   
+
+    <input type="text" id="addItemInput" placeholder="Enter name">
+    <button id="addItemBtn">Add</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        const addItemInput = document.getElementById('addItemInput');
+        const addItemBtn = document.getElementById('addItemBtn');
+        const itemList = document.getElementById('itemList');
+
+        addItemBtn.addEventListener('click', function() {
+            const newItemText = addItemInput.value.trim();
+            if (newItemText !== '') {
+                const listItem = document.createElement('li');
+                listItem.textContent = newItemText;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', function() {
+                    listItem.remove();
+                });
+
+                listItem.appendChild(deleteButton);
+                itemList.appendChild(listItem);
+                addItemInput.value = ''; 
+            }
+        });
+    </script>
+</body>
+</html>
